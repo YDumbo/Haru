@@ -1,0 +1,82 @@
+{ "data": [
+  {
+    "id": 1,
+    "writer": {
+      "id": "cksal5911",
+      "nickName": "chanmi"
+    },
+    "title": "2021년 3월 21일 TIL",
+    "contents": "오늘은 A에 대해 공부했어!",
+    "writeDate": "2021-03-01"
+  },
+  {
+    "id": 2,
+    "writer": {
+      "id": "cksal5911",
+      "nickName": "chanmi"
+    },
+    "title": "2021년 3월 22일 TIL",
+    "contents": "오늘은 A에 대해 공부했어!",
+    "writeDate": "2021-03-20"
+  },
+  {
+    "id": 3,
+    "writer": {
+      "id": "cksal5911",
+      "nickName": "chanmi"
+    },
+    "title": "2021년 3월 22일 TIL",
+    "contents": "오늘은 A에 대해 공부했어!",
+    "writeDate": "2021-03-21"
+  },
+  {
+    "id": 4,
+    "writer": {
+      "id": "cksal5911",
+      "nickName": "chanmi"
+    },
+    "title": "2021년 3월 22일 TIL",
+    "contents": "오늘은 A에 대해 공부했어!",
+    "writeDate": "2021-03-21"
+  },
+  {
+    "id": 5,
+    "writer": {
+      "id": "cksal5911",
+      "nickName": "chanmi"
+    },
+    "title": "2021년 3월 22일 TIL",
+    "contents": "오늘은 A에 대해 공부했어!",
+    "writeDate": "2021-03-23"
+  },
+  {
+    "id": 6,
+    "writer": {
+      "id": "cksal5911",
+      "nickName": "chanmi"
+    },
+    "title": "2021년 3월 22일 TIL",
+    "contents": "오늘은 A에 대해 공부했어!",
+    "writeDate": "2021-03-24"
+  },
+  {
+    "id": 7,
+    "writer": {
+      "id": "cksal5911",
+      "nickName": "chanmi"
+    },
+    "title": "2021년 3월 22일 TIL",
+    "contents": "오늘은 A에 대해 공부했어!",
+    "writeDate": "2021-03-25"
+  },
+  {
+    "id": 8,
+    "writer": {
+      "id": "cksal5911",
+      "nickName": "chanmi"
+    },
+    "title": "2021년 3월 30일 TIL",
+    "contents": "오늘은 A에 대해 공부했어!",
+    "writeDate": "2021-03-30"
+  }
+]}
