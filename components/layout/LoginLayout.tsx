@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Header from '../common/Header';
 
 interface ILoginLayoutProps {
   children: JSX.Element;
