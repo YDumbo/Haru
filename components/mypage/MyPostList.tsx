@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import IPost from '../../interfaces/PostInterface';
+import IPost from '../../types/post';
 
 interface IMyPostList {
   post: IPost[];
 }
+
 const PostListWrapper = styled.div``;
 const PostList = styled.ul`
   padding: 10px;
