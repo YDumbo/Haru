@@ -3,6 +3,7 @@ import styled from 'styled-components';
 interface ILoginLayoutProps {
   children: JSX.Element;
 }
+
 const Wrapper = styled.div`
   width: 100vw;
   height: 90vh;
@@ -14,7 +15,7 @@ const Wrapper = styled.div`
 `;
 const Logo = styled.img`
   width: 130px;
-`
+`;
 const Contents = styled.div`
   padding: 10px;
   display: flex;
