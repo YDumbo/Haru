@@ -1,7 +1,18 @@
 import styled from 'styled-components';
+import Link from 'next/link';
+import StyledButton from './StyledButton';
 
+export interface IHeaderProps {
+  isMyPage: boolean,
+}
+const MyPageHeader = styled.div`
+  display: flex;
+`;
 const HeaderWrapper = styled.header`
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   left: 0;
   right: 0;
   top: 0;
@@ -15,13 +26,25 @@ const HeaderWrapper = styled.header`
   }
 `;
 
-function Header():JSX.Element {
+function Header({ isMyPage }:IHeaderProps):JSX.Element {
   return (
     <HeaderWrapper>
       <img src='/images/logo.jpeg' alt="logo" />
-      <title>나의 하루</title>
+      {isMyPage
+        ? <MyPageHeader>
+            <Link href="/login">
+              <StyledButton text= "홈으로 돌아가기" color="blue" size="auto" variant="fill-none" />
+            </Link>
+            <Link href="/login">
+              <StyledButton text= "로그아웃" color="blue" size="auto" />
+            </Link>
+          </MyPageHeader>
+        : <Link href="/login">
+            <StyledButton text= "MY PAGE" size="small" color="blue" variant="outline" />
+          </Link>
+      }
     </HeaderWrapper>
-  )
+  );
 }
 
 export default Header;

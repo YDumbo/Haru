@@ -1,5 +1,5 @@
 export type Tcolor = 'green' | 'blue' | 'red'
-export type TSize = 'small' | 'medium' | 'large'
+export type TSize = 'auto' | 'small' | 'medium' | 'large'
 export type Tvariant = 'outline' | 'fill-none' | 'fill'
 
 export interface IStyledButton {

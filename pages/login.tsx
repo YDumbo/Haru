@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NaverLoginButton, KakaoLoginButton, GoogleLoginButton } from '../components/common/SocialButton';
+import { NaverLoginButton, KakaoLoginButton, GoogleLoginButton } from '../components/login/SocialButton';
 import LoginLayout from '../components/layout/LoginLayout';
 
 const LoginWrapper = styled.div`
