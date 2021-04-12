@@ -15,17 +15,13 @@ const color = {
   white: '#FFFFFF',
   green: '#30a14e',
   red: '#dc3636',
-  blue: '#3677dc',
-};
-const buttonSize = {
-  small: '100px',
-  medium: '200px',
-  large: '400px',
+  blue: '#3585f6',
+  deepBlue: '#3a4961',
+  lightGrey: '#f7f8fa',
 };
 const theme = {
   window,
   color,
-  buttonSize,
 };
 
 export default theme;
