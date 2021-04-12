@@ -1,55 +1,43 @@
 import styled from 'styled-components';
-import Image from 'next/image';
+import moment from 'moment';
 import postMock from '../mockData/postMock.json';
 import AppLayout from '../components/layout/AppLayout';
 import HeatMap from '../components/mypage/HeatMap';
 import WiseSaying from '../components/mypage/WiseSaying';
 import MyPostList from '../components/mypage/MyPostList';
-import moment from 'moment';
+import Profile from '../components/mypage/Profile';
 
 const MyPageWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
 `;
-const MyPageLeft = styled.div`
-  width: 60%;
+const MyPageIntro = styled.div`
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-right: 10px;
+  align-items: center;
+  padding: 50px 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid ${({ theme }) => theme.color.lightGrey};
 `;
-const MyPageRight = styled.div`
-  width: 40%;
+const MyPagePostList = styled.div`
+  width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
 `;
-const MyProfileWrapper = styled.div`
-  width: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
-`;
-const MyProfileNickName = styled.div`
 
-`;
 const Today = styled.div`
   font-size: 30px;
   font-weight: 200;
   margin: 20px;
-`;
-
-const MyProfileImage = styled(Image)`
-  border-radius: 45%;
-`;
-const MyPostListTitle = styled.div`
-  font-size: 30px;
-  font-weight: 200;
-  padding: 10px;
 `;
 function myPage():JSX.Element {
   const currentDate = new Date();
@@ -59,19 +47,15 @@ function myPage():JSX.Element {
   return (
     <AppLayout>
       <MyPageWrapper>
-        <MyPageLeft>
-          <MyProfileWrapper>
-            <MyProfileImage src="/images/sampleProfile.jpeg" alt="profileImage" width="100" height="100" />
-            <MyProfileNickName>CHAN MI</MyProfileNickName>
-          </MyProfileWrapper>
+        <MyPageIntro>
+          <Profile profileImage="/images/sampleProfile.jpeg" nickName="chanmi" />
           <Today>&quot;오늘은{currentDay}입니다&quot;</Today>
           <WiseSaying />
           <HeatMap currentYear={currentYear} commitData={commitData} />
-        </MyPageLeft>
-        <MyPageRight>
-          <MyPostListTitle>나의 하루들</MyPostListTitle>
+        </MyPageIntro>
+        <MyPagePostList>
           <MyPostList post={postMock.data} />
-        </MyPageRight>
+        </MyPagePostList>
       </MyPageWrapper>
     </AppLayout>
   );
