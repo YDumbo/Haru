@@ -14,16 +14,16 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal; 
   }
   @font-face {
-     font-family: 'S-CoreDream-3Light';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
      font-weight: normal;
      font-style: normal;
   }
   @font-face {
-    font-family: 'IBMPlexSansKR-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+      font-family: 'BMJUA';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
   }
   @font-face {
     font-family: 'MapoPeacefull';
@@ -36,12 +36,19 @@ const GlobalStyle = createGlobalStyle`
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+  }
+  @font-face {
+      font-family: 'BMDOHYEON';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
   html,
   body {
     padding: 0;
     margin: 0;
     font-family: 'NanumBarunpen', 'IBMPlexSansKR-Regular', sans-serif;
+    color: #3D3B51;
   }
   ul, li {
     padding: 0;

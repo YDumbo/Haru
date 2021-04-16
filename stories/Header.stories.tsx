@@ -1,8 +1,8 @@
 import { Story } from '@storybook/react';
-import Header, { IHeaderProps } from '../../components/common/Header';
+import Header, { IHeaderProps } from '../components/common/Header';
 
 export default {
-  title: 'components|button/StyledButton',
+  title: 'components|Header',
   component: Header,
 };
 
