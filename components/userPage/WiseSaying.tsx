@@ -5,7 +5,7 @@ const WiseSayingWrapper = styled.div`
 `;
 const Highlight = styled.span`
   padding-right: 10px;
-  background: linear-gradient(180deg,rgba(255,255,255,0) 60%, #afe8af 50%);
+  background: ${({ theme }) => `linear-gradient(180deg,rgba(255,255,255,0) 60%, ${theme.highlightBlue} 50%)`};
 `;
 
 function WiseSaying():JSX.Element {

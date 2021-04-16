@@ -14,5 +14,5 @@ export interface IStyledButtonProps {
   text: string,
   label? : React.ReactNode,
   variant?: Tvariant,
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }

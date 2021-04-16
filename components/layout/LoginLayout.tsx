@@ -26,7 +26,7 @@ const Contents = styled.div`
 function LoginLayout({ children }: ILoginLayoutProps):JSX.Element {
   return (
     <Wrapper>
-      <Logo src="/images/logo.jpeg" />
+      <Logo src="/images/logo.png" />
       <Contents>{children}</Contents>
     </Wrapper>
   );

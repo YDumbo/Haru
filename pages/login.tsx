@@ -8,7 +8,7 @@ const LoginWrapper = styled.div`
   align-items: center;
   justify-content: center;
   & h3 {
-    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, #afe8af 50%);
+    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, #d9e4ff 50%);
   }
 `;
 const SocialLoginButtonWrapper = styled.div`

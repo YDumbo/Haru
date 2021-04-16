@@ -26,14 +26,15 @@ const YearList = styled.ul`
   flex-direction: column;
 `;
 const YearItem = styled.li<IYearItemProps>`
-  color: ${({ theme }) => theme.color.blue};
+  color: ${({ theme }) => theme.blue};
   width: 100px;
   padding: 10px;
   text-align: center;
   font-size: 13px;
-  border-bottom: 1px solid ${({ select, theme }) => (select ? theme.color.blue : theme.color.white)};
+  border-bottom: 1px solid ${({ select, theme }) => (select ? theme.blue : theme.pointColor)};
+  cursor: pointer;
   &:hover {
-    background-color: ${({ select, theme }) => (select === false && theme.color.lightGrey)}; 
+    background-color: ${({ select, theme }) => (select === false && theme.gray)}; 
   }
 `;
 const SvgGrassBox = styled.svg`
@@ -53,11 +54,11 @@ const ColorStateBox = styled.div`
 `;
 const Week = styled.g``;
 const Day = styled.rect<IStyleRect>`
-  fill: ${(props) => (props.level === 0 ? '#ebedf0'
-    : props.level === 1 ? '#9bb1e9'
-      : props.level === 2 ? '#4054c4'
-        : props.level === 3 ? '#3041a1'
-          : props.level === 4 && '#21306e')
+  fill: ${(props) => (props.level === 0 ? '#ededed'
+    : props.level === 1 ? '#8395c4'
+      : props.level === 2 ? '#3449bf'
+        : props.level === 3 ? '#253382'
+          : props.level === 4 && '#0d173e')
 };
 `;
 
