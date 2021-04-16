@@ -5,23 +5,43 @@ const size = {
   mobileS: '23.125em', // 370px
 };
 const window = {
-  pc: `@media screen and (max-width: ${size.pc}px)`,
+  pc: `@media only screen and (max-width: ${size.pc}px)`,
   tab: `@media screen and (max-width: ${size.tab}px)`,
   mobile: `@media screen and (max-width: ${size.mobile}px)`,
   mobileS: `@media screen and (max-width: ${size.mobileS}px)`,
 };
-const color = {
-  black: '#000000',
-  white: '#FFFFFF',
-  green: '#30a14e',
+const darkTheme = {
+  backgroundColor: '#102A43',
+  fontColor: '#F0F4F8',
+  pointColor: '#FFFFFF',
+  green: '#b0ed97',
   red: '#dc3636',
   blue: '#3585f6',
-  deepBlue: '#3a4961',
-  lightGrey: '#f7f8fa',
+  highlightBlue: '#627d98',
+  gray: '#cdd4d7',
 };
-const theme = {
-  window,
-  color,
+const lightTheme = {
+  backgroundColor: '#FFFFFF',
+  fontColor: '#3D3B51',
+  pointColor: '#102A43',
+  green: '#30a14e',
+  red: '#dc3636',
+  highlightBlue: '#d9e4ff',
+  blue: '#3585f6',
+  gray: '#f7f8fa',
+};
+const fontSizes = {
+  xsm: '10px',
+  sm: '12px',
+  md: '16px',
+  lg: '20px',
+  xl: '24px',
+  xxl: '28px',
 };
 
-export default theme;
+export {
+  window,
+  darkTheme,
+  lightTheme,
+  fontSizes,
+};

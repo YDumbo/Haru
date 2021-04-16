@@ -45,10 +45,15 @@ const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
+    background-color: ${({ theme }: {theme}) => theme.backgroundColor};
     padding: 0;
     margin: 0;
     font-family: 'NanumBarunpen', 'IBMPlexSansKR-Regular', sans-serif;
-    color: #3D3B51;
+    color: ${({ theme }: {theme}) => theme.fontColor};
+  }
+  h1,h2,h3,h4,h5 {
+    padding: 0;
+    margin: 0;
   }
   ul, li {
     padding: 0;
