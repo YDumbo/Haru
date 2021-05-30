@@ -1,7 +1,7 @@
 import Link from 'next/link';
+import { Button } from 'elpo-ui';
 import styled from 'styled-components';
 import IPost from '../../types/post';
-import StyledButton from '../common/StyledButton';
 import StyledInput from '../common/StyledInput';
 
 interface IPostList {
@@ -9,15 +9,24 @@ interface IPostList {
 }
 
 const PostListWrapper = styled.div``;
+const PostListTitle = styled.span`
+  padding-right: 30px;
+  background: ${({ theme }) => `linear-gradient(180deg,rgba(255,255,255,0) 60%, ${theme.highlightBlue} 50%)`};
+  @media only screen and (max-width: 780px) {
+    margin-bottom: 40px;
+  }
+`;
 const List = styled.ul`
   padding: 10px;
 `;
 const ListItem = styled.li`
   display: flex;
+  background-color: ${({ theme }) => theme.black100};
+  margin-bottom: 20px;
   justify-content: space-between;
-  padding: 35px 0px;
+  padding: 20px;
   font-size: 20px;
-  border-bottom: 1px solid #e8e8e8;
+  border-radius: 5px;
   cursor: pointer;
   &:hover {
     
@@ -30,11 +39,7 @@ const PostListHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  & span {
-    padding-right: 30px;
-    background: ${({ theme }) => `linear-gradient(180deg,rgba(255,255,255,0) 60%, ${theme.highlightBlue} 50%)`}
-  }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 780px) {
     flex-direction: column;
   }
 `;
@@ -47,17 +52,23 @@ function PostList({ post }:IPostList):JSX.Element {
   return (
     <PostListWrapper>
       <PostListHeader>
-        <span>나의 하루들</span>
+        <PostListTitle>
+          <span role="img" aria-label="emoji">🌿</span>
+          나의 하루들
+        </PostListTitle>
         <PostListHeaderRight>
           <StyledInput />
           <Link href="/writePage">
-            <StyledButton
-              text="글 추가"
-              color="blue"
-              size="small"
-              variant="outline"
-              label={<img src="/images/write.png" alt="icon" width={20} height={20} />}
-            />
+            <Button
+              theme="outlined"
+              endIcon={<img src="/images/write.png" alt="icon" width={20} height={20} />}
+              mobileViewButton = {{
+                icon: <img src="/images/write.png" alt="icon" width={20} height={20} />,
+                viewSize: '700',
+              }}
+            >
+              글 추가
+            </Button>
           </Link>
         </PostListHeaderRight>
       </PostListHeader>

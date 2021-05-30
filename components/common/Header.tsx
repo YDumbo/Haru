@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import DarkModeToggle from 'react-dark-mode-toggle';
 import { useContext } from 'react';
+import { Button } from 'elpo-ui';
 import StyledButton from './StyledButton';
 import { ThemeContext } from '../../pages/_app';
 
@@ -17,14 +18,13 @@ const HeaderWrapper = styled.header`
   right: 0;
   top: 0;
   padding: 0px 10px;
-  border-bottom: 1px solid #e8e8e8;
   box-shadow: rgb(0 0 0 / 8%) 0px 0px 8px;
-  background-color: white;
+  background-color: ${({ theme }) => theme.black100};
   z-index: 100;
-  & img {
-    width: 80px;
-    margin: 10px;
-  }
+`;
+const Logo = styled.img`
+  width: 80px;
+  margin: 10px;
 `;
 const MyPageHeader = styled.div`
   display: flex;
@@ -36,20 +36,39 @@ const StyledDarkModeToggle = styled(DarkModeToggle)`
     outline: none;
   }
 `;
+const Icon = styled.img`
+  width: 20px;
+`;
 
 function Header({ isMyPage }:IHeaderProps):JSX.Element {
   const theme = useContext(ThemeContext);
   return (
     <HeaderWrapper>
-      <img src='/images/logo.png' alt="logo" />
+      <Logo src='/images/logo.png' alt="logo" />
       <MyPageHeader>
         {isMyPage
           ? <>
               <Link href="/login">
-                <StyledButton text= "홈으로 돌아가기" color="blue" size="auto" variant="fill-none" />
+                <Button
+                  theme="text"
+                  mobileViewButton = {{
+                    icon: <Icon src="/images/home.png" alt="home_icon" />,
+                    viewSize: '700',
+                  }}
+                >
+                  홈으로 돌아가기
+                </Button>
               </Link>
               <Link href="/login">
-                <StyledButton text= "로그아웃" color="blue" size="auto" />
+                <Button
+                  theme="fill"
+                  mobileViewButton = {{
+                    icon: <Icon src="/images/logout.png" alt="home_icon" />,
+                    viewSize: '700',
+                  }}
+                >
+                  로그아웃
+                </Button>
               </Link>
             </>
           : <Link href="/login">

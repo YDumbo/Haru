@@ -7,12 +7,13 @@ import styled from 'styled-components';
 const PostEditorWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: white;
 `;
 const TitleInput = styled.input`
   border: none;
   font-size: 40px;
   padding: 20px;
+  background-color: ${({ theme }) => theme.backgroundColor};
+  color: ${({ theme }) => theme.fontColor};
   &:focus {
     outline: none;
   }
@@ -24,7 +25,7 @@ function PostEditor():JSX.Element {
       <TitleInput placeholder="제목을 입력하세요" />
       <Editor
         initialValue="글을 작성하세요!"
-        previewStyle="vertical"
+        previewStyle="tab"
         height="600px"
         initialEditType="markdown"
         useCommandShortcut={true}
