@@ -1,7 +1,6 @@
 import { Story } from '@storybook/react';
 import styled from 'styled-components';
-import StyledButton from '../components/common/StyledButton';
-import { IStyledButtonProps } from '../types/styledButton';
+import StyledButton, { IStyledButtonProps } from '../components/common/StyledButton';
 
 const Inline = styled.div`
   display: flex;

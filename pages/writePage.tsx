@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { Button } from 'elpo-ui';
 import styled from 'styled-components';
-import StyledButton from '../components/common/StyledButton';
 import Modal from '../components/common/Modal';
 
 const PostEditorWrapper = styled.div`
@@ -38,8 +38,24 @@ function writePost():JSX.Element {
     <PostEditorWrapper>
       <PostEditor />
       <ButtonGroup>
-        <StyledButton text="나가기" variant='outline' color='red' size='small' onClick={onHandleClickModalOpen}/>
-        <StyledButton text="게시하기" color='blue' />
+        <Button
+          theme="outlined"
+          mobileViewButton={{
+            icon: <img src="/images/logout.png" alt="home_icon" width={20}/>,
+            viewSize: '700',
+          }}
+          onClick={onHandleClickModalOpen}
+        >
+          나가기
+        </Button>
+        <Button
+          mobileViewButton={{
+            icon: <span>게시</span>,
+            viewSize: '700',
+          }}
+        >
+          게시하기
+        </Button>
       </ButtonGroup>
       {isModalOpen && <Modal
       onClose={onHandleClickModalClose}

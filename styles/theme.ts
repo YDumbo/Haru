@@ -11,7 +11,7 @@ const window = {
   mobileS: `@media screen and (max-width: ${size.mobileS}px)`,
 };
 const darkTheme = {
-  backgroundColor: '#102A43',
+  backgroundColor: '#18181a',
   fontColor: '#F0F4F8',
   pointColor: '#FFFFFF',
   green: '#b0ed97',
@@ -19,9 +19,16 @@ const darkTheme = {
   blue: '#3585f6',
   highlightBlue: '#627d98',
   gray: '#cdd4d7',
+  black100: '#34343a',
+  black200: '#18181a',
+  black300: '#20202c',
+  black400: '#292831',
+  black500: '#f8f9fa',
+  black600: '#f2f2f2',
+  black700: '#ffffff',
 };
 const lightTheme = {
-  backgroundColor: '#FFFFFF',
+  backgroundColor: '#f8f9fa',
   fontColor: '#3D3B51',
   pointColor: '#102A43',
   green: '#30a14e',
@@ -29,6 +36,13 @@ const lightTheme = {
   highlightBlue: '#d9e4ff',
   blue: '#3585f6',
   gray: '#f7f8fa',
+  black100: '#ffffff',
+  black200: '#f2f2f2',
+  black300: '#f8f9fa',
+  black400: '#292831',
+  black500: '#20202c',
+  black600: '#18181a',
+  black700: '#0b0b0d',
 };
 const fontSizes = {
   xsm: '10px',

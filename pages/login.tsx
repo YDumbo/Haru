@@ -8,7 +8,8 @@ const LoginWrapper = styled.div`
   align-items: center;
   justify-content: center;
   & h3 {
-    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, #d9e4ff 50%);
+    background: ${({ theme }) => `linear-gradient(180deg,rgba(255,255,255,0) 60%, ${theme.highlightBlue} 50%)`};
+    margin-bottom: 20px;
   }
 `;
 const SocialLoginButtonWrapper = styled.div`
@@ -24,7 +25,9 @@ function login():JSX.Element {
   return (
     <LoginLayout>
       <LoginWrapper>
-        <h3>간편 로그인으로 하루 서비스를 이용해보세요</h3>
+        <h3>
+          간편 로그인으로 하루 서비스를 이용해보세요
+        </h3>
         <SocialLoginButtonWrapper>
           <NaverLoginButton />
           <KakaoLoginButton />

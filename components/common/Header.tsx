@@ -3,12 +3,8 @@ import Link from 'next/link';
 import DarkModeToggle from 'react-dark-mode-toggle';
 import { useContext } from 'react';
 import { Button } from 'elpo-ui';
-import StyledButton from './StyledButton';
 import { ThemeContext } from '../../pages/_app';
 
-export interface IHeaderProps {
-  isMyPage: boolean,
-}
 const HeaderWrapper = styled.header`
   position: fixed;
   display: flex;
@@ -40,41 +36,23 @@ const Icon = styled.img`
   width: 20px;
 `;
 
-function Header({ isMyPage }:IHeaderProps):JSX.Element {
+function Header():JSX.Element {
   const theme = useContext(ThemeContext);
   return (
     <HeaderWrapper>
       <Logo src='/images/logo.png' alt="logo" />
       <MyPageHeader>
-        {isMyPage
-          ? <>
-              <Link href="/login">
-                <Button
-                  theme="text"
-                  mobileViewButton = {{
-                    icon: <Icon src="/images/home.png" alt="home_icon" />,
-                    viewSize: '700',
-                  }}
-                >
-                  홈으로 돌아가기
-                </Button>
-              </Link>
-              <Link href="/login">
-                <Button
-                  theme="fill"
-                  mobileViewButton = {{
-                    icon: <Icon src="/images/logout.png" alt="home_icon" />,
-                    viewSize: '700',
-                  }}
-                >
-                  로그아웃
-                </Button>
-              </Link>
-            </>
-          : <Link href="/login">
-              <StyledButton text= "MY PAGE" size="small" color="blue" variant="outline" />
-            </Link>
-        }
+          <Link href="/login">
+            <Button
+              theme="fill"
+              mobileViewButton = {{
+                icon: <Icon src="/images/logout.png" alt="home_icon" />,
+                viewSize: '700',
+              }}
+            >
+              로그아웃
+            </Button>
+          </Link>
         <StyledDarkModeToggle size={70} onChange = {theme.onToggleDark} checked={theme.dark} />
       </MyPageHeader>
     </HeaderWrapper>

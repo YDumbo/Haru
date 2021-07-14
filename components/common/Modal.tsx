@@ -1,5 +1,5 @@
+import { Button } from 'elpo-ui';
 import styled from 'styled-components';
-import StyledButton from './StyledButton';
 
 interface IModalProps {
   onClose: () => void,
@@ -49,8 +49,12 @@ function Modal({
         <ModalTitle>{title}</ModalTitle>
         <ModalContent>{content}</ModalContent>
         <ModalButtonGroup>
-          <StyledButton text="확인" color="red" variant="outline" size="small" onClick={onConfirm}/>
-          <StyledButton text="취소" color="blue" variant="outline" size="small" onClick={onClose}/>
+          <Button theme="outlined" size="small" onClick={onConfirm}>
+            확인
+          </Button>
+          <Button theme="outlined" size="small" onClick={onClose}>
+            취소
+          </Button>
         </ModalButtonGroup>
       </ModalWrapper>
     </>

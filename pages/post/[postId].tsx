@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
-import StyledButton from '../../components/common/StyledButton';
+import { Button } from 'elpo-ui';
+import styled from 'styled-components';
 import postMock from '../../mockData/postMock.json';
 
 const PostWrapper = styled.div`
@@ -14,6 +15,9 @@ const PostHeader = styled.header`
   justify-content: space-between;
   & img {
     width: 50px;
+  }
+  & button {
+    cursor: pointer;
   }
 `;
 const PostTitle = styled.h1`
@@ -29,13 +33,13 @@ const PostWriteContent = styled.div`
 `;
 const PostEditButtonGroup = styled.div`
   display: flex;
-  width: 220px;
+  width: 200px;
   justify-content: space-between;
 `;
 
 function Post():JSX.Element {
   const router = useRouter();
-  const isMe = true;
+  const [isMe, setIsMe] = useState(true);
   const { postId } = router.query;
   const onClickBack = (e) => {
     e.preventDefault();
@@ -50,8 +54,14 @@ function Post():JSX.Element {
       {isMe
         && (
         <PostEditButtonGroup>
-          <StyledButton text="수정하기" color="blue" size="small" variant="outline"/>
-          <StyledButton text="삭제하기" color="red" size="small"/>
+          <Button
+            theme="outlined"
+          >
+            수정하기
+          </Button>
+          <Button>
+            삭제하기
+          </Button>
         </PostEditButtonGroup>
         )
       }

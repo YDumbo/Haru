@@ -36,11 +36,17 @@ const YearItem = styled.li<IYearItemProps>`
   &:hover {
     background-color: ${({ select, theme }) => (select === false && theme.gray)}; 
   }
+  @media screen and (max-width: 768px) { 
+    display: none;
+  }
 `;
 const SvgGrassBox = styled.svg`
   overflow: hidden;
   height: 112px;
   width: 750px;
+  @media screen and (max-width: 768px) { 
+    width: 100%; 
+  }
 `;
 const ColorStateBox = styled.div`
   display: flex;
@@ -70,7 +76,10 @@ function HeatMap({ currentYear, commitData }: IHashMapProps):JSX.Element {
   return (
     <HeatMapWrapper>
       <GrassBoxWrapper>
-        <p>{`${currentYear}년 나의 기록들`}</p>
+        <p>
+          <span role="img" aria-label="emoji">✨</span>
+          {`${currentYear}년 나의 기록들`}
+        </p>
         <SvgGrassBox>
           <g>
             {commit.length !== 0 && new Array(52).fill(0).map((_el, i) => (
